@@ -1,0 +1,20 @@
+Package: QCscATAC
+Type: Package
+Title: set up strict Quality Control for different scATAC-seq data set.
+Version: 0.1.0
+Author: person("Yue", "Zhou", email = "wilkins.zhou@mail.utoronto.ca", role = c("aut", "cre"))
+Maintainer: Yue Zhou <wilkins.zhou@mail.utoronto.ca>
+Description: QCscATAC is an R package for setting up strict quality control (QC) for different
+    scATAC-seq data set to eliminate low-quality cells before pre-processing (batch correction/
+    dimension reduction or clustering etc.) data analysis.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Depends: R (>= 3.1.0)
+Imports: 
+    mclust
+Suggests: 
+    dplyr
+
