@@ -1,0 +1,67 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+  # QCscATAC
+
+  <!-- badges: start -->
+  <!-- badges: end -->
+
+  ## Description
+
+  `QCscATAC` is an R package that will set up the Quality Control and eliminate low-quality data from obtained scATAC-seq data set before any pre-processing analysis. Generally speaking, this package will improve the data quality from raw scATAC-seq data set, and thus increase the quality (fast analysis speed, smaller batch effects, lower redundant cells for dimension reduction) of pre-processing analysis.
+
+The package is developed under R 4.1.1 in Mac.
+
+## Installation
+
+To install the latest version of the package:
+
+  ``` r
+require("devtools")
+devtools::install_github("Yue-Zhou0429/QCscATAC", build_vignettes = TRUE)
+library("QC")
+```
+
+To run the Shiny app: Under construction
+
+## Overview
+
+``` r
+ls("package:QCscATAC")
+data(package = "QCscATAC") # optional
+```
+
+`QCscATAC` contains 2 functions to enforce quality control on the import data, and 3 function to output UMAP, TSS enrichment plot and Fragment Size Distribution plot as reference.
+
+
+``` r
+browseVignettes("QCscATAC")
+```
+
+An overview of the package is illustrated below.
+
+
+## Contributions
+
+The author of the package is Yue Zhou.
+
+## References
+
+Himes et al. (2014). RNA-Seq transcriptome profiling identifies CRISPLD2
+as a glucocorticoid responsive gene that modulates cytokine function in
+airway smooth muscle cells. *PloS one, 9*(6), e99625.
+<https://doi.org/10.1371/journal.pone.0099625>
+
+  Love, M. I., Huber, W., & Anders, S. (2014). Moderated estimation of
+fold change and dispersion for RNA-seq data with DESeq2. *Genome
+Biology, 15*(12), 550. <https://doi.org/10.1186/s13059-014-0550-8>
+
+  Robinson, M. D., McCarthy, D. J., & Smyth, G. K. (2010). edgeR: A
+Bioconductor package for differential expression analysis of digital
+gene expression data. *Bioinformatics, 26*(1), 139–140.
+<https://doi.org/10.1093/bioinformatics/btp616>
+
+  ## Acknowledgements
+
+  This package was developed as part of an assessment for 2021 BCB410H:
+  Applied Bioinfor- matics, University of Toronto, Toronto, CANADA.
