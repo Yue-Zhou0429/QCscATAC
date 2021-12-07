@@ -6,8 +6,6 @@ createArrowFiles <- function(
   sampleNames = names(inputFiles),
   outputNames = sampleNames,
   validBarcodes = NULL,
-  geneAnnotation = getGeneAnnotation(),
-  genomeAnnotation = getGenomeAnnotation(),
   minTSS = 4,
   minFrags = 1000,
   maxFrags = 100000,
@@ -72,9 +70,7 @@ createArrowFiles <- function(
     stop("outputNames must be equal length to inputFiles")
   }
   .validInput(input = validBarcodes, name = "validBarcodes", valid = c("list", "character", "null"))
-  geneAnnotation <- .validGeneAnnotation(geneAnnotation)
-  genomeAnnotation <- .validGenomeAnnotation(genomeAnnotation)
-  geneAnnotation <- .validGeneAnnoByGenomeAnno(geneAnnotation = geneAnnotation, genomeAnnotation = genomeAnnotation)
+
   .validInput(input = filterFrags, name = "filterFrags", valid = c("numeric"))
   .validInput(input = filterTSS, name = "filterTSS", valid = c("numeric"))
   .validInput(input = removeFilteredCells, name = "removeFilteredCells", valid = c("boolean"))
